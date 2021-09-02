@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+  <title>Antrian Anda</title>
+
+  <!-- BOOTSTRAP STYLES-->
+  <link href="<?php echo base_url('assets/home/css/bootstrap.css'); ?>" rel="stylesheet" />
+  <!-- FONTAWESOME STYLES-->
+  <link href="<?php echo base_url('assets/home/css/font-awesome.min.css'); ?>" rel="stylesheet" />
+  <!-- GOOGLE FONTS-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugin/jquery-ui/jquery-ui.min.css'); ?>" /> <!-- Load file css jquery-ui -->
+  <script src="<?php echo base_url('assets/home/js/jquery.min.js'); ?>"></script> <!-- Load file jquery -->
+
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center">
+        <h3>E Tiket</h3>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center">
+        <h5>Melayani dengan Sepenuh Hati</h5>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center">
+        <h6>Jalan Sriwijaya</h6>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center">
+        <h6>085 123 123 123</h6>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>&nbsp;</tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center">Nomor Antrian Anda :</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <?php foreach ($antrian as $key) {
+      ?>
+        <td align="center">
+          <h1>C - <?php echo $key->trans; ?></h1>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+  <?php } ?>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="center"><?php date_default_timezone_set('Asia/Jakarta');
+                          echo date('d-m-Y H:i:s');
+                         ?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="center">
+      <h6>Transkrip</h6>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="center">
+      <h5>TERIMA KASIH KUNJUNGAN ANDA</h5>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="<?php echo site_url() . 'Pasien/Antrian' ?>" class="btn btn-primary" name="kembali">KEMBALI</a></td>
+    <td align="center"></td>
+    <td align="center"><a href="<?php echo site_url() . 'Pasien/printTrans' ?>" class="btn btn-danger" name="cetak">DOWNLOAD</a>&nbsp;(Gunakan menu Download, apabila ingin mencetak Nomer Antrian Anda)</td>
+  </tr>
+  </table>
+</body>
+
+</html>
