@@ -77,10 +77,11 @@
     <thead>
         <tr>
             <th>No</th>
-            <th>Tanggal</th>
             <th>NIM</th>
             <th>Nama</th>
+            <th>Prodi</th>
             <th>Perihal</th>
+            <th>Tanggal Ambil</th>
             <th>Status</th>
 
         </tr>
@@ -104,7 +105,6 @@
         <?php echo "<td>" . $data->tensi_darah . "</td>";
                 echo "<td>" . $data->gejala . "</td>";
                 echo "<td>" . $data->diagnosa . "</td>";
-                echo "<td>" . $data->resep_obat . "</td>";
                 echo "</tr>";
             }
         } else { // Jika data tidak ada

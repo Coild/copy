@@ -47,10 +47,10 @@
                     } ?></td>
                 <td>
                 <?php if ($data->status == 0) {?>
-                    <a href="<?php echo base_url('Admin/confirm/' . $data->nim.'/'.$data->hal) ?>" class="btn btn-success">Konfirmasi</a>
+                    <a href="<?php echo base_url('Admin/confirm/' . $data->nim.'/'.$data->hal) ?>" class="btn btn-success">Konfirmasi <?= $data->status?></a>
                     <button type="button" class="btn btn-secondary" onclick="return confirm('Apakah anda yakin?')" class="btn btn-circle btn-secondary" disabled><i class="fa fa-trash"></i></button>
                     <?php }else {?>
-                      <button type="button" class="btn btn-secondary" disabled>Konfirmasi</button>
+                      <button type="button" class="btn btn-secondary" disabled>Konfirmasi <?= $data->status?></button>
                       <a href="<?php echo base_url('Admin/riwayat/' . $data->nim.'/'.$data->hal) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
                     <?php } ?>
                     
